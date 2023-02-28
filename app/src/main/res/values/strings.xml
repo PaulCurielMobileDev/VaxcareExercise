@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">VaxcareExercise</string>
+    <string name="status_onshelf">OnShelf</string>
+    <string name="status_checkedout">CheckedOut</string>
+</resources>

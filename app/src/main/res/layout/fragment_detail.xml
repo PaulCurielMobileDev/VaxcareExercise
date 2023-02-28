@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="book"
+            type="com.mexicandeveloper.vaxcareexercise.models.Book" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <TextView
+            android:id="@+id/tvDetailBookName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{book.title}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="@dimen/big_text"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:textColor="@color/main"
+            android:id="@+id/tvDetailId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{``+book.id}"
+            app:layout_constraintBottom_toTopOf="@+id/tvDetailBookName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvDetailBookName"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/tvDetailAuthor"
+            android:textColor="@color/dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:text="@{book.author}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailBookName"
+            tools:text="@string/app_name" />
+
+        <TextView
+            android:id="@+id/tvDetailFee"
+            android:textColor="@color/second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:text="@{``+book.fee}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvDetailBookName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDetailBookName"
+            tools:text="5.5" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
